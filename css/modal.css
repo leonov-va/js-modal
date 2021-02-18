@@ -1,0 +1,83 @@
+.vmodal {}
+
+.vmodal--open .vmodal__overlay,
+.vmodal--open .vmodal__window {
+  z-index: 1000;
+  opacity: 1;
+}
+
+.vmodal--open .vmodal__overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.vmodal--open .vmodal__window {
+  transform: translateY(100px);
+}
+
+.vmodal--hide .vmodal__overlay,
+.vmodal--hide .vmodal__window {
+  z-index: 1000;
+  opacity: 1;
+}
+
+.vmodal--hide .vmodal__overlay {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.vmodal--hide .vmodal__window {
+  transform: translateY(-200px);
+}
+
+.vmodal__overlay {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  opacity: 0;
+  transition: background-color .2s ease-in;
+}
+
+.vmodal__window {
+  z-index: -1;
+  transform: translateY(-200px);
+  width: 600px;
+  margin: 0 auto;
+  border-radius: 5px;
+  background-color: #ffffff;
+  opacity: 0;
+  transition: transform .2s ease-in;
+}
+
+.vmodal__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.vmodal__title {
+  font-size: 1.5rem;
+}
+
+.vmodal__close {
+  cursor: pointer;
+}
+
+.vmodal__body {
+  padding: 10px;
+}
+
+.vmodal__body p {
+  margin: 0 0 5px;
+}
+
+.vmodal__footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 5px 10px;
+  border-top: 1px solid #eeeeee;
+}
